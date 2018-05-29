@@ -35,12 +35,16 @@
 	
 	<ul class="nav navbar-nav navbar-right">
 	<li class="">
-	<a href="#"<span class="glyphicon glyphicon-plus"></span>&nbsp;
-	Name</a>
+	<a href="{%url  'account_signup' %}"<span class="glyphicon glyphicon-plus"></span>&nbsp;
+	Signup</a>
 	</li>
 	<li class="">
-	<a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;
-	Name</a>
+	<a href="{%url 'account_logout' %}"><span class="glyphicon glyphicon-off"></span>&nbsp;
+	Logout</a>
+	</li>
+	<li class="">
+	<a href="{%url 'account_login' %}"><span class="glyphicon glyphicon-on"></span>&nbsp;
+	Login</a>
 	</li>
 	</ul>
 	
