@@ -21,6 +21,10 @@
 	<a href="{% url 'about'%}"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;
 	About</a>
 	</li>
+	<li  {% if request.path == profile %} class="active" {% endif %}>
+	<a href="{% url 'profile'%}"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;
+	Profile</a>
+	</li>
 	<li  {% if request.path == contact %} class="active" {% endif %}>
 	<a href="{% url 'contact'%}"><span class="glyphicon glyphicon-user"></span>&nbsp;
 	Contact</a>
@@ -34,18 +38,22 @@
 	</form>
 	
 	<ul class="nav navbar-nav navbar-right">
+	{% if not request.user.is_authenticated %}
 	<li class="">
-	<a href="{%url  'account_signup' %}"<span class="glyphicon glyphicon-plus"></span>&nbsp;
+	<a href="{%url  'account_signup' %}"><span class="glyphicon glyphicon-plus"></span>&nbsp;
 	Signup</a>
 	</li>
 	<li class="">
-	<a href="{%url 'account_logout' %}"><span class="glyphicon glyphicon-off"></span>&nbsp;
-	Logout</a>
-	</li>
 	<li class="">
 	<a href="{%url 'account_login' %}"><span class="glyphicon glyphicon-on"></span>&nbsp;
 	Login</a>
 	</li>
+	{% else %}
+	<li>
+	<a href="{%url 'account_logout' %}"><span class="glyphicon glyphicon-off"></span>&nbsp;
+	Logout</a>
+	</li>
+	{% endif %}
 	</ul>
 	
 	</div>

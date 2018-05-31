@@ -11,6 +11,8 @@
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
 <h1>{% trans "Sign In" %}</h1>
+<p>Don't have account?<a class="btn" href="{% url 'account_signup'%}">{%trans "Sign Up" %}</a></p>
+
 
 {% get_providers as socialaccount_providers %}
 {% if socialaccount_providers %}

@@ -21,6 +21,8 @@ from django.urls import path, include, re_path
 
 from profiles import views as profile_views
 from contact import views as contact_views
+from checkout import views as checkout_views
+
 
 
 urlpatterns = [
@@ -29,6 +31,8 @@ urlpatterns = [
     path('about/', profile_views.about, name='about'),
     path('contact/',contact_views.contact, name='contact'),
     path('accounts/', include('allauth.urls')),
+    path('profile/', profile_views.userProfile, name = "profile"),
+    path('checkout/', checkout_views.checkout, name = "checkout"),
 ]
 
 if settings.DEBUG:

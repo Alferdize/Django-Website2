@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+
+        
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+				<!-- Left Album Info 
+                    <a href="#">
+                        {% if album.album_logo.url %}
+                            <img src="#" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    </a>
+					-->
+                    <h1>{{ user.username }} </h1>
+                    <h2>{{ user.email }}</h2>
+					<a href="#" class="btn btn-primary btn-sm" role="button">Update</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info 
+        <div class="col-sm-8 col-md-9">
+
+            <ul class="nav nav-pills" style="margin-bottom: 10px;">
+                <li role="presentation" class="active"><a href="#">View All</a></li>
+            </ul>
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <h3>All Songs</h3>
+
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for song in album.songs_set.all %}
+                            <tr>
+                                <td>{{ song.song_title }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+-->
+    </div>
+
+{% endblock %}

@@ -28,9 +28,9 @@ EMAIL_USE_TLS = True
 SECRET_KEY = '&lz!8l$0egbvx2^tcw77bz5_5_^m_ykxv!hqd&-ow&7-2-0)6#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'stripe',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -180,3 +182,6 @@ ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
 ACCOUNT_PASSWORD_MIN_LENGTH = 6
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_UIcjWogVFPJBKxjiFXKEE9gP'
+STRIPE_SECRET_KEY = 'sk_test_vEKgOhaL3FZNLPd11NNpaLu9'
